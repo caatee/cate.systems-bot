@@ -1,3 +1,3 @@
 # cate.systems-bot
 
-# uhh this is just a bot
+# first ever thing of mine ive open sourced btw
