@@ -1,4 +1,4 @@
-const { Load } = require('../loader.js');
+const { Load } = require('../loaders/cliloader.js');
 const colors = require('colors');
 const { MessageEmbed } = require('discord.js')
 
@@ -19,7 +19,7 @@ exports.run = (client, messageCreate, args, Discord) => {
     const exampleEmbed = new MessageEmbed()
     .setAuthor(messageCreate.author.tag)
     .setTitle('Created CLI succesfully with the following parameters.')
-    .setDescription(`\`name: ${name}@Discord/cate.systems>\``)
+    .setDescription(`\`name: ${name}@cate.systems\npermission: Owner\``)
     .setTimestamp()
 
     messageCreate.channel.send({ embeds: [exampleEmbed] });

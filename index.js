@@ -13,9 +13,9 @@ fs.readdir("./events/", (err, files) => {
     files.forEach(file => {
       if (!file.endsWith(".js")) return;  
       const event = require(`./events/${file}`); 
-      let nameeventaaa = file.split(".")[0];
+      let nameevent = file.split(".")[0];
 
-      client.on(nameeventaaa, event.bind(null, client));
+      client.on(nameevent, event.bind(null, client));
       delete require.cache[require.resolve(`./events/${file}`)];
     });
   });
@@ -31,5 +31,4 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(command, thecommand);
   });
 });
-
 client.login(process.env.DISCORD_TOKEN)
